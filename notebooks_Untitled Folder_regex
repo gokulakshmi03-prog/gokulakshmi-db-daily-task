@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "924faf58-8b45-4bd2-84d8-a4fdb1dc60ee",
+      "cell_type": "code",
+      "source": "import re\ntext=\"this is my email dfg@gmail.com and ads@gmail.com\"\na=re.findall(r'\\w{2,}+@+\\w{2,}\\.\\w{2,}',text)\na",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "execution_count": 2,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['dfg@gmail.com', 'ads@gmail.com']"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 2
+    },
+    {
+      "id": "b594c697-42c2-41af-b71c-44e5f6d0dc89",
+      "cell_type": "code",
+      "source": "text=input(\"enter your text\")\na=re.findall(r'adc@',text)\nif a:\n    print(\"sucess\")\nelse:\n    print(\"not sucess\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "enter your text adc@gmail.com\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "sucess\n"
+        }
+      ],
+      "execution_count": 4
+    },
+    {
+      "id": "d6747ae5-d4f4-47db-af6e-7d1cfd1960ba",
+      "cell_type": "code",
+      "source": "text=\"finish your home work at home \"\nsearch=re.search(r'home',text)\nprint(search)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "<re.Match object; span=(12, 16), match='home'>\n"
+        }
+      ],
+      "execution_count": 5
+    },
+    {
+      "id": "2d37f563-2da3-4442-b6db-43c90c29a365",
+      "cell_type": "code",
+      "source": "text=\"my phone number is 8\"\nextract=re.search(r'\\d',text)\nprint(extract)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "<re.Match object; span=(19, 20), match='8'>\n"
+        }
+      ],
+      "execution_count": 6
+    },
+    {
+      "id": "d7584560-c0d1-4f26-90db-b8a92f821465",
+      "cell_type": "code",
+      "source": "text=\"go to the bed early\"\ns=re.sub(r'the',\"@\",text)\ns",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "execution_count": 8,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'go to @ bed early'"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": 8
+    },
+    {
+      "id": "56980610-93ac-41e1-a54c-a67b50a2bb8a",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
